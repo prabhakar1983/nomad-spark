@@ -147,7 +147,6 @@ class ExecutorTaskTest extends SparkFunSuite {
     val sparkExtraClasspath = "/hadoop-2.8.5/share/hadoop/tools/lib/hadoop-aws-2.8.5.jar:" +
       "/hadoop-2.8.5/share/hadoop/tools/lib/aws-java-sdk-core-1.10.6.jar"
     sparkConf.set("spark.executor.extraClassPath", sparkExtraClasspath)
-    sparkConf.set("spark.driver.extraClassPath", sparkExtraClasspath)
     val nomadTask = new Task()
 
     ExecutorTask.configure(jobConf = commonConf,
